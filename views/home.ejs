@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Index</title>
+
+    </head>
+    <%- include ('./partials/navbar.ejs') %>
+
+
+    <body class="container">
+        <a href="/new">Create Post</a>
+        <% for(let i = post.length - 1; i >= 0; i--){%>
+
+            <div class="thread">
+                <a href="/<%=post[i]._id%>">
+                    <h3><%=post[i].title%></h3>
+                </a>
+                <p><%=post[i]%></p>
+                <br/>
+            </div>
+        <% } %>
+
+    </body>
+</html>
