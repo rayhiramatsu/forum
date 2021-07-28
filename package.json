@@ -1,9 +1,13 @@
 {
-  "name": "msgboard",
+  "name": "forum",
+  "engines": {
+    "node": "14.17.0"
+  },
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "method-override": "^3.0.0",
@@ -16,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rayhiramatsu/msgboard.git"
+    "url": "git+https://github.com/rayhiramatsu/forum.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rayhiramatsu/msgboard/issues"
+    "url": "https://github.com/rayhiramatsu/forum/issues"
   },
-  "homepage": "https://github.com/rayhiramatsu/msgboard#readme"
+  "homepage": "https://github.com/rayhiramatsu/forum#readme"
 }

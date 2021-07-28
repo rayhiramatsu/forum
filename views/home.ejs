@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <title>Index</title>
-
     </head>
     <%- include ('./partials/navbar.ejs') %>
 
@@ -16,6 +15,7 @@
                 <a href="/<%=post[i]._id%>">
                     <h3><%=post[i].title%></h3>
                 </a>
+                <p>Likes: <%=post[i].votes%></p>
                 <p><%=post[i]%></p>
                 <br/>
             </div>
