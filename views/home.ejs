@@ -3,24 +3,15 @@
     <head>
         <meta charset="utf-8">
         <title>Index</title>
+        <%- include ('./partials/head.ejs') %>
     </head>
     <%- include ('./partials/navbar.ejs') %>
 
 
-    <body class="container">
+    <body class="container has-background-white-ter">
         <a href="/new">Create Post</a>
-        <% for(let i = post.length - 1; i >= 0; i--){%>
 
-            <div class="thread">
-                <a href="/<%=post[i]._id%>">
-                    <h3><%=post[i].title%></h3>
-                </a>
-                <p>Likes: <%=post[i].votes%></p>
-                <p><%=post[i]%></p>
-                <br/>
-            </div>
-        <% } %>
+        <%- include ('./partials/postsHome.ejs') %>
 
-        <h1>tester</h1>
     </body>
 </html>
