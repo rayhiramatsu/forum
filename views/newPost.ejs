@@ -9,12 +9,26 @@
     <%- include ('./partials/navbar.ejs') %>
 
     <body class="container">
-        <h1>New post:</h1>
-        <form action="/" method="POST">
-            Title: <input type="text" name="title" /><br/>
-            Text: <input type="text" name="body" placeholder="min 100 characters"/><br/>
+        <p class="title">New post:</p>
 
-            <input type="submit" name="" value="Submit"/>
+
+        <form action="/" method="POST">
+            <div class="field">
+                <label class="label">Title:</label>
+                <div class="control">
+                    <input class="input" type="text" name="title" />
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Text:</label>
+                <div class="control">
+                    <!-- <input class="input" type="text" name="body" placeholder="min 100 characters"/> -->
+                    <textarea class="textarea" name="body" placeholder="min 100 characters"></textarea>
+                </div>
+            </div>
+            <div class="field">
+                <input type="submit" name="" value="Submit"/>
+            </div>
         </form>
     </body>
 </html>

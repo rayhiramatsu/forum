@@ -86,3 +86,71 @@ home.ejs or postsHome.ejs jquery script
         });
     });
 </script>
+
+
+//////////////////////////////////////
+edit link
+
+
+<a class="is-pulled-right" href="/<%=post._id%>/edit">
+<ion-icon name="create-outline" size="large"></ion-icon>
+</a>
+
+
+///////////////////////////////////////
+show route elems
+
+<h1><%=post.title%></h1>
+<p><%=post.body%></p>
+
+<div class="vote">
+    <p>Votes: <%=post.votes%></p>
+
+</div>
+<!-- Edit post -->
+<a href="/<%=post._id%>/edit">Edit</a>
+
+
+//////////////////////////////////////////
+index route card footer
+
+<!-- footer -->
+<div class="card-footer">
+    <div class="card-footer-item">
+        <a href="/<%=post._id%>"><%=post.numComments%> comments (reply)</a>
+    </div>
+    <a href="#" class="card-footer-item">Save</a>
+
+/////////////////////////////////////////////
+show route delete post form
+
+<form action="/<%=post._id%>?_method=DELETE" method="POST">
+    <input type="submit" value="DELETE">
+</form>
+
+
+/////////////////////////////////////////////
+other delete forms
+
+<!-- <form action="/" method="POST">
+    Title: <input type="text" name="title" /><br/>
+    Text: <input type="text" name="body" placeholder="min 100 characters"/><br/>
+
+    <input type="submit" name="" value="Submit"/>
+</form> -->
+
+
+
+<!-- <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+            <input class="input" type="text" placeholder="e.g Alex Smith">
+        </div>
+</div>
+
+<div class="field">
+    <label class="label">Email</label>
+    <div class="control">
+        <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+    </div>
+</div> -->

@@ -4,44 +4,14 @@
         <meta charset="utf-8">
         <title>Post: <%=post.title%></title>
         <%- include ('./partials/head.ejs') %>
-
     </head>
     <%- include ('./partials/navbar.ejs') %>
-
     <body class="container">
-
-        <%- include ('./partials/postShow.ejs') %>
-
-
-        <h1><%=post.title%></h1>
-        <p><%=post.body%></p>
-
-        <div class="vote">
-            <p>Votes: <%=post.votes%></p>
-
-        </div>
-
-
-
-        <!-- Edit post -->
-        <a href="/<%=post._id%>/edit">Edit</a>
-
-        <!-- Delete post -->
-
-
-        <p><%=post%></p>
-<form action="/<%=post._id%>?_method=DELETE" method="POST">
-    <input type="submit" value="DELETE">
-</form>
-
-
-        <!-- Delete -->
-
-
-
-
-
-
+        <a href="/new">Create Post</a>
+        <br>
+        <br>
+        <br>
+        <%- include('./partials/postShow.ejs') %>
         <%- include ('./partials/ionicons_script.ejs') %>
     </body>
 </html>

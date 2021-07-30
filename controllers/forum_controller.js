@@ -66,16 +66,29 @@ forum.put('/:id', (req, res)=>{
     });
 });
 
-// Update-Upvote
+// Update-Upvote-Index
 forum.put('/:id/upvote', (req, res)=>{
     Post.findByIdAndUpdate(req.params.id, {$inc: {votes: + 1}}, (err, foundPost)=>{
         res.redirect('/');
     });
 });
-// Update-Downvote
+// Update-Downvote-Index
 forum.put('/:id/downvote', (req, res)=>{
     Post.findByIdAndUpdate(req.params.id, {$inc: {votes: - 1}}, (err, foundPost)=>{
         res.redirect('/');
+    });
+})
+
+// Update-Upvote-showPost
+forum.put('/:id/showpost/upvote', (req, res)=>{
+    Post.findByIdAndUpdate(req.params.id, {$inc: {votes: + 1}}, (err, foundPost)=>{
+        res.redirect(`/${req.params.id}`);
+    });
+});
+// Update-Downvote-showPost
+forum.put('/:id/showpost/downvote', (req, res)=>{
+    Post.findByIdAndUpdate(req.params.id, {$inc: {votes: - 1}}, (err, foundPost)=>{
+        res.redirect(`/${req.params.id}`);
     });
 })
 

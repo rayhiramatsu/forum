@@ -7,7 +7,7 @@
             <div class="is-100px">
                 <div class="card-content is-primary">
                     <!-- upvote -->
-                    <form action="/<%=post._id%>/upvote?_method=PUT" method="POST">
+                    <form action="/<%=post._id%>/showpost/upvote?_method=PUT" method="POST">
                             <button class="button">
                                 <ion-icon name="arrow-up-circle" size="large" style="color: hsl(217, 71%, 53%)"></ion-icon>
                             </button>
@@ -19,7 +19,7 @@
                     </div>
 
                     <!-- downvote -->
-                    <form action="/<%=post._id%>/downvote?_method=PUT" method="POST">
+                    <form action="/<%=post._id%>/showpost/downvote?_method=PUT" method="POST">
                             <button class="button">
                                 <ion-icon name="arrow-down-circle" size="large" style="color: hsl(348, 100%, 61%)"></ion-icon>
                             </button>
@@ -29,15 +29,20 @@
 
             <!-- right -->
             <div class="column is-rest">
-                <div class="card-content is-primary">
-                    <a href="/<%=post._id%>">
-                        <p class="title"><%=post.title%></p>
+                <!-- title -->
+                <header class="card-header">
+                    <p class="title pl-4"><%=post.title%></p>
+                    <!-- edit button -->
+                    <a href="/<%=post._id%>/edit">
+                        <ion-icon name="create-outline" size="small"></ion-icon>
                     </a>
+                </header>
+                <!-- body -->
+                <div class="card-content">
+                    <p class="content has-text-black-ter"><%=post.body%></p>
                 </div>
             </div>
         </div>
-
-
         <!-- footer -->
         <div class="card-footer">
             <div class="card-footer-item">
@@ -45,6 +50,12 @@
             </div>
             <a href="#" class="card-footer-item">Save</a>
 
-
+            <!-- delete -->
+            <form action="/<%=post._id%>?_method=DELETE" method="POST">
+                    <button class="button">
+                        <ion-icon name="trash-outline" size="large""></ion-icon>
+                    </button>
+            </form>
         </div>
+    <!-- end card -->
     </div>
