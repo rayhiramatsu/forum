@@ -9,11 +9,34 @@
     <%- include ('./partials/navbar.ejs') %>
 
     <body class="container">
-        <h1><%=post.title%></h1>
-        <form action="/<%=post._id%>?_method=PUT" method="POST">
-            Text: <input type="text" name="body" value="<%=post.body%>" placeholder="min 100 characters"/><br/>
+        <p class="title">Edit post:</p>
 
-            <input type="submit" name="" value="Submit"/>
+
+
+
+
+        <form action="/<%=post._id%>?_method=PUT" method="POST">
+            <!-- Title textbox grayed out. Title cannot be edited, design choise -->
+            <fieldset disabled>
+                <div class="field">
+                    <label class="label">Title:</label>
+                    <div class="control">
+                        <input class="input is-large" type="text" name="title" value="<%=post.title%>" placeholder="title"/>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="field">
+                <label class="label">Text:</label>
+                <div class="control">
+                    <!-- <input class="input" type="text" name="body" placeholder="min 100 characters"/> -->
+                    <textarea class="textarea" type="text" name="body"><%=post.body%></textarea>
+
+
+                </div>
+            </div>
+            <div class="field">
+                <input type="submit" name="" value="Submit"/>
+            </div>
         </form>
     </body>
 </html>

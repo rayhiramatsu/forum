@@ -154,3 +154,15 @@ other delete forms
         <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
     </div>
 </div> -->
+
+////////////////////////////////////////////
+
+edit forms
+
+<form action="/<%=post._id%>?_method=PUT" method="POST">
+    Text: <input type="text" name="body" value="<%=post.body%>" placeholder="min 100 characters"/><br/>
+
+    <input type="submit" name="" value="Submit"/>
+</form>
+
+Text: <input type="text" name="body" value="<%=post.body%>" placeholder="min 100 characters"/>
