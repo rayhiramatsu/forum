@@ -1,17 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="has-background-white-ter has-navbar-fixed-top">
     <head>
         <meta charset="utf-8">
         <title>Index</title>
         <%- include ('./partials/head.ejs') %>
+        <!-- <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+        </script>
+        <script src="js/index_app.js" charset="utf-8"></script> -->
     </head>
     <%- include ('./partials/navbar.ejs') %>
 
 
-    <body class="container has-background-white-ter">
+    <body class="container">
         <a href="/new">Create Post</a>
+        <br>
+        <br>
+        <button id="bouton" type="button" name="button">test button</button>
+        <br>
+        <br>
+        <div class="bar">
+
+        </div>
+        <br>
+        <br>
 
         <%- include ('./partials/postsHome.ejs') %>
 
+
+        <%- include ('./partials/ionicons_script.ejs') %>
     </body>
+    <footer class="foot">
+
+    </footer>
+
 </html>

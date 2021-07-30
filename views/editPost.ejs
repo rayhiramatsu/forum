@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="has-background-white-ter has-navbar-fixed-top">
     <head>
         <meta charset="utf-8">
         <title>Edit: <%=post.title%></title>
+        <%- include ('./partials/head.ejs') %>
+
     </head>
     <%- include ('./partials/navbar.ejs') %>
 
-    <body>
+    <body class="container">
         <h1><%=post.title%></h1>
         <form action="/<%=post._id%>?_method=PUT" method="POST">
             Text: <input type="text" name="body" value="<%=post.body%>" placeholder="min 100 characters"/><br/>

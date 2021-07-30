@@ -5,6 +5,7 @@ const postSchema = new mongoose.Schema({
     title: {type: String, required: true},
     body: {type: String, required: true},
     votes: {type: Number, default: 0},
+    numComments: {type: Number, default: 0}
 },
 {timestamps: true});
 

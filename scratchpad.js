@@ -64,3 +64,25 @@ bulma card with columns
 /////////////////////////////////////////////////
 
 # MONGODB_URI=mongodb+srv://comet:comet7@forum.s4htd.mongodb.net/forummongodb?retryWrites=true&w=majority
+
+
+///////////////////////////////////////////////////
+home.ejs or postsHome.ejs jquery script
+
+<script type="text/javascript">
+    $(()=>{
+        $("#bouton").on("click", (event)=>{
+            let $foo = $("<h1>").text("new elem created by jquery onclick");
+            $foo.appendTo(".bar");
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(()=>{
+        $("#upvote_<%=post[i]._id%>").on("click", (event)=>{
+            let $foo = $("<h1>").text("new elem created by jquery onclick");
+            $foo.appendTo(".bar");
+        });
+    });
+</script>

@@ -66,6 +66,20 @@ forum.put('/:id', (req, res)=>{
     });
 });
 
+// Update-Upvote
+forum.put('/:id/upvote', (req, res)=>{
+    Post.findByIdAndUpdate(req.params.id, {$inc: {votes: + 1}}, (err, foundPost)=>{
+        res.redirect('/');
+    });
+});
+// Update-Downvote
+forum.put('/:id/downvote', (req, res)=>{
+    Post.findByIdAndUpdate(req.params.id, {$inc: {votes: - 1}}, (err, foundPost)=>{
+        res.redirect('/');
+    });
+})
+
+
 // Destroy
 forum.delete('/:id/', (req, res)=>{
     Post.findByIdAndDelete(req.params.id, (err, foundPost)=>{

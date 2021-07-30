@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" class="has-background-white-ter has-navbar-fixed-top">
     <head>
         <meta charset="utf-8">
         <title>Post: <%=post.title%></title>
+        <%- include ('./partials/head.ejs') %>
+
     </head>
     <%- include ('./partials/navbar.ejs') %>
 
-    <body>
+    <body class="container">
+
+        <%- include ('./partials/postShow.ejs') %>
+
+
         <h1><%=post.title%></h1>
         <p><%=post.body%></p>
 
@@ -31,5 +37,11 @@
 
         <!-- Delete -->
 
+
+
+
+
+
+        <%- include ('./partials/ionicons_script.ejs') %>
     </body>
 </html>
